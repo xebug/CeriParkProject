@@ -1,0 +1,46 @@
+<!-- -->
+<ion-header class="no-shadow">
+
+  <ion-navbar class="no-border">
+    <ion-title>
+      <ion-icon name="cog" class="text-primary"></ion-icon>
+      <span class="text-primary">Réglages</span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="common-bg">
+  <!-- User settings-->
+  <ion-item-group>
+    <ion-item-divider color="secondary" class="bold">Paramètres utilisateurs</ion-item-divider>
+    <ion-item>
+      <ion-label>Langue</ion-label>
+      <ion-select [(ngModel)]="language" cancelText="Cancel" okText="OK">
+        <ion-option value="fr" selected="true">Français (FR)</ion-option>
+      </ion-select>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label>Notifications?</ion-label>
+      <ion-toggle checked="true"></ion-toggle>
+    </ion-item> -->
+  </ion-item-group>
+  <!-- App settings-->
+  <ion-item-group>
+    <!--<ion-item-divider color="secondary" class="bold">App Settings</ion-item-divider>
+    <ion-item>
+      <span>Clear Private Data</span>
+    </ion-item>
+    <ion-item>
+      <ion-label>Push Notifications?</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <span>Privacy Policy</span>
+    </ion-item> -->
+  </ion-item-group>
+
+  <!--sign out button-->
+  <button ion-button color="primary" full tappable (click)="logout()">QUITTER</button>
+
+</ion-content>

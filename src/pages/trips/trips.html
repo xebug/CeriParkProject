@@ -1,0 +1,41 @@
+<!-- -->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <span ion-text>Résultats</span>
+    </ion-title>
+  </ion-navbar>
+
+  <!--  -->
+  <ion-toolbar padding color="light">
+    <p ion-text no-margin class="text-white">
+      <strong> Chargement en cours ...</strong>
+    </p>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding class="trips detail-bg">
+  <!--list of trips-->
+  <div class="trip card" *ngFor="let trip of trips" tappable (click)="viewDetail(trip.id)" margin-bottom>
+    <div class="background border-bottom" [ngStyle]="{'background-image': 'url(' + trip.imagePrincipale + ')'}">
+      <div class="background-filter rlt">
+        <div class="align-bottom" padding-left padding-right>
+          <h6 class="pull-left text-white" ion-text>{{ trip.nomParking }}</h6>
+          <h6 class="pull-right text-white" ion-text>
+            <ion-icon name="time" class="text-white"></ion-icon> {{ trip.horaire }}
+          </h6>
+
+
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="padding-sm primary-bg">
+      <ion-icon name="ios-arrow-dropright" class="text-white"></ion-icon>
+      <span ion-text class="text-green bold"> {{ trip.placesDispos }} %</span>
+
+      <span class=" pull-right" ion-text color="danger"><strong>de places disponibles</strong></span>
+    </div>
+  </div>
+</ion-content>
