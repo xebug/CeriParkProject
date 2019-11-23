@@ -1,3 +1,3 @@
-# Ionic 3 Start Theme
+Application mobile permettant de trouver une place de parking libre.
 
-Ionic 3 Start Theme with 10 Pages, mock data, providers samples, Storage, Http and more...
+Developpé en ReactJS / Ionic3
